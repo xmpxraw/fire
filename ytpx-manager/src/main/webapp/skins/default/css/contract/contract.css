@@ -1,0 +1,27 @@
+body {
+	background-color: #ecf0f5;
+}
+.fixed-nav {
+	position: fixed;
+	left: 15px;
+	top: 0px;
+	z-index: 10000;
+}
+.table td.text-right {
+	vertical-align: middle;
+}
+div.form-group {
+	margin-bottom: 0px;
+}
+tr.other-party {
+	display: none;
+}
+a.form-link {
+	text-decoration: underline;
+}
+
+#basic-table pre {
+	background-color:white;
+	border: none;
+	font-family: "Microsoft Yahei";
+}

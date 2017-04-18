@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+	<!-- 配置eh缓存管理器 -->
+	<bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" 
+			lazy-init="true" depends-on="sessionFactory" p:acceptExisting="true"/>
+	 
+	<bean id="systemCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+	    <property name="cacheManager" ref="ehcacheManager" />
+	    <property name="cacheName" value="system_cache" />
+	</bean>
+	
+<!-- 	<bean id="onlineUserCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+	    <property name="cacheManager" ref="ehcacheManager" />
+	    <property name="cacheName" value="online_user_cache" />
+	</bean> -->
+
+	<!-- <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+    	<property name="minIdle" value="${redis.minIdle}" />
+        <property name="maxIdle" value="${redis.maxIdle}" />  
+        <property name="maxTotal" value="${redis.maxActive}" />  
+        <property name="maxWaitMillis" value="${redis.maxWait}" />  
+        <property name="testOnBorrow" value="${redis.testOnBorrow}" />  
+    </bean>
+    
+    <bean id="jedisConnFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="hostName" value="${redis.host}" />
+        <property name="port" value="${redis.port}" />
+        <property name="password" value="${redis.password}" />
+        <property name="database" value="${redis.database}"/>
+        <property name="usePool" value="true" />
+        <property name="poolConfig" ref="poolConfig" />
+    </bean>
+    
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+		<property name="connectionFactory" ref="jedisConnFactory" />
+		<property name="keySerializer">
+			<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>	
+		<property name="valueSerializer">
+			<bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+		</property>
+		<property name="hashKeySerializer">  
+	       <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>  
+	    </property>
+	    <property name="hashValueSerializer">
+	       <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>  
+	    </property>
+	</bean> 
+	
+	<bean id="session-poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+    	<property name="minIdle" value="${redis.minIdle}" />
+        <property name="maxIdle" value="${redis.maxIdle}" />  
+        <property name="maxTotal" value="${redis.maxActive}" />  
+        <property name="maxWaitMillis" value="${redis.maxWait}" />  
+        <property name="testOnBorrow" value="${redis.testOnBorrow}" />  
+    </bean>
+    
+    <bean id="session-jedisConnFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="hostName" value="${redis.host}" />
+        <property name="port" value="${redis.port}" />
+        <property name="password" value="${redis.password}" />
+        <property name="database" value="${redis.session.database}"/>
+        <property name="usePool" value="true" />
+        <property name="poolConfig" ref="session-poolConfig" />
+    </bean>
+    
+	<bean id="session-redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+		<property name="connectionFactory" ref="session-jedisConnFactory" />
+		<property name="keySerializer">
+			<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>	
+		<property name="valueSerializer">
+			<bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+		</property>
+		<property name="hashKeySerializer">  
+	       <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>  
+	    </property>
+	    <property name="hashValueSerializer">
+	       <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>  
+	    </property>
+	</bean>
+	-->
+	
+</beans>

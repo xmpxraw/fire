@@ -1,0 +1,136 @@
+/*以下是扩展图标*/
+.icon-home{
+	background:url('icons/home.png') no-repeat center center;
+}
+.icon-sort{
+	background:url('icons/sort.png') no-repeat center center;
+}
+.icon-role{
+	background:url('icons/role.png') no-repeat center center;
+}
+.icon-func{
+	background:url('icons/function.png') no-repeat center center;
+}
+.icon-func2{
+	background:url('icons/function2.png') no-repeat center center;
+}
+.icon-logs{
+	background:url('icons/logs.png') no-repeat center center;
+}
+.icon-dictionary{
+	background:url('icons/dictionary.png') no-repeat center center;
+}
+.icon-users{
+	background:url('icons/users.png') no-repeat center center;
+}
+.icon-group{
+	background:url('icons/group.png') no-repeat center center;
+}
+.icon-pict{
+	background:url('icons/picture.png') no-repeat center center;
+}
+.icon-folder{
+	background:url('icons/folder.png') no-repeat center center;
+}
+.icon-organ{
+	background:url('icons/organ.png') no-repeat center center;
+}
+.icon-dept{
+	background:url('icons/dept.png') no-repeat center center;
+}
+.icon-team{
+	background:url('icons/team.png') no-repeat center center;
+}
+.icon-emp{
+	background:url('icons/emp.png') no-repeat center center;
+}
+.icon-emp-woman{
+	background:url('icons/emp-woman.png') no-repeat center center;
+}
+.icon-login{
+	background:url('icons/login.png') no-repeat center center;
+}
+.icon-star{
+	background:url('icons/star.png') no-repeat center center;
+}
+.icon-star-dis{
+	background:url('icons/star_dis.png') no-repeat center center;
+}
+.icon-menu{
+	background:url('icons/menu.png') no-repeat center center;
+}
+.icon-right{
+	background:url('icons/right.png') no-repeat center center;
+}
+.icon-item{
+	background:url('icons/item.png') no-repeat center center;
+}
+.icon-file{
+	background:url('icons/file.png') no-repeat center center;
+}
+.icon-download{
+	background:url('icons/download.gif') no-repeat center center;
+}
+.icon-txt{
+	background:url('icons/txt.gif') no-repeat center center;
+}
+.icon-view{
+	background:url('icons/txt.gif') no-repeat center center;
+}
+.icon-chart{
+	background:url('icons/chart.png') no-repeat center center;
+}
+.icon-tongji{
+	background:url('icons/tongji.png') no-repeat center center;
+}
+.icon-ruku{
+	background:url('icons/ruku.png') no-repeat center center;
+}
+.icon-chuku{
+	background:url('icons/chuku.png') no-repeat center center;
+}
+.icon-menu-title{
+	background:url('icons/menu-title.png') no-repeat center center;
+}
+.icon-system-monitor {
+	background: url('icons/system_monitor.png') no-repeat center center;
+}
+.icon-database-monitor {
+	background: url('icons/database_monitor.png') no-repeat center center;
+}
+.icon-general-contract {
+	background: url('icons/general_contract.png') no-repeat center center;
+}
+.icon-important-contract {
+	background: url('icons/important_contract.png') no-repeat center center;
+}
+.icon-todolist{
+	background:url('icons/todolist.png') no-repeat center center;
+}
+.icon-tracelist{
+	background:url('icons/tracelist.png') no-repeat center center;
+}
+.icon-contract-search{
+	background:url('icons/contract_search.png') no-repeat center center;
+}
+.icon-category{
+	background:url('icons/category.png') no-repeat center center;
+}
+.icon-comment{
+	background:url('icons/contract_comment.png') no-repeat center center;
+}
+.icon-adjunct{
+	background:url('icons/contract_adjunct.png') no-repeat center center;
+}
+.icon-budget{
+	background:url('icons/contract_budget.png') no-repeat center center;
+}
+.icon-workflow{
+	background:url('icons/workflow.png') no-repeat center center;
+}
+.icon-process{
+	background:url('icons/process.png') no-repeat center center;
+}
+.icon-xls{
+	background:url('icons/file/xlsx.png') no-repeat center center;
+}

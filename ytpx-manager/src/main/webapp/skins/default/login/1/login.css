@@ -1,0 +1,83 @@
+body {
+	color: #3f443f;
+	background: url("./image/web_bg.jpg") #fff no-repeat 50% 0px;
+}
+
+.box {
+	margin: 0px auto;
+	padding-top: 100px;
+	width: 1003px;
+}
+
+.header {}
+
+#logo {
+	display: block;
+	margin: 0px auto;
+	position: relative;
+	top:40px;
+	left:0px;
+}
+
+.login-box {
+	box-sizing: border-box;
+	height: 350px;
+	padding-top: 90px;
+	background: url("./image/box_bg.png") no-repeat 50% 0px;
+}
+
+.login-table {
+	width: 420px;
+	margin: 0px auto;
+}
+
+.login-label {
+	text-align: right;
+	width: 180px;
+	height:42px;
+	font-size: 15px;
+}
+
+.username {
+	border-bottom: #677065 1px solid;
+	border-left: #677065 1px solid;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	width: 200px;
+	padding-right: 0px;
+	font: 14px/28px "microsoft yahei", arial, "宋体", helvetica, verdana,sans-serif;
+	background: url("./image/inputbg.gif") repeat-x 0px top;
+	float: left;
+	height: 28px;
+	border-top: #677065 1px solid;
+	border-right: #677065 1px solid;
+	padding-top: 0px;
+}
+
+.password {
+	border-bottom: #677065 1px solid;
+	border-left: #677065 1px solid;
+	padding-bottom: 0px;
+	line-height: 28px;
+	padding-left: 5px;
+	width: 200px;
+	padding-right: 0px;
+	background: url("./image/inputbg.gif") #fff repeat-x 0px top;
+	height: 28px;
+	border-top: #677065 1px solid;
+	border-right: #677065 1px solid;
+	padding-top: 0px;
+}
+
+#system-msg {
+	margin: 10px 0px 0px 35px;
+}
+
+.footer {
+	margin-top: 50px;
+	height: 34px;
+	background: url("./image/foot_bg.png") no-repeat 50% 0px;
+	text-align:center;
+	line-height:34px;
+	color: #fff;
+}

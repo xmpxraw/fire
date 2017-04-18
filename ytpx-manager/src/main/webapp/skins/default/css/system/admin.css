@@ -1,0 +1,151 @@
+#logo {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.header-bg {
+	background-image: url("../../image/system/admin/logo-bg-2.png");
+	background-repeat: repeat-x;
+}
+.header {
+	height:100%;
+	background-image: url("../../image/system/admin/logo-bg.png");
+	background-repeat: no-repeat;
+}
+
+#setup {
+	margin-top: 15px;
+	margin-right: 15px;
+}
+#setup .user-info {
+	display: inline-block;
+	width: 200px;
+	margin-right: 30px;
+	color: white;
+}
+#setup .user-info img {
+	float:left;
+	margin:10px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+#setup .user-info div {
+	line-height: 18px;
+}
+#setup a.setup-icon:link {
+	display:inline-block;
+	margin:10px 5px;
+	width:40px;
+	height:40px;
+	vertical-align: top;
+}
+#setup a.setup-icon img {
+	width:32px;
+	height:32px;
+	border:none;
+}
+#setup a.setup-icon:hover img {
+	width:40px;
+	height:40px;
+}
+
+#copyright {
+	margin:0px;
+	font-size: 14px;
+	line-height: 30px;
+	color: white;
+	text-align: center;
+}
+#msgbox {
+	display: none;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	height: 25px;
+	line-height: 25px;
+	padding: 0px 10px;
+	font-size: 13px;
+}
+#msgbox.info {
+	background-color: #D8F3FF;
+	border: 1px solid #AFD6DC;
+	color: black;
+}
+#msgbox.warning {
+	background-color: #FFF1C8;
+	border: 1px solid #FFDC75;
+	color: black;
+}
+#msgbox.error {
+	background-color: #FFCCBF;
+	border: 1px solid #F58A6E;
+	color: black;
+}
+
+.layout-split-west {
+  border-right: 5px solid #46A1E2;
+}
+.accordion .accordion-header {
+  background: #E0ECFF;
+  height:18px;
+}
+.accordion .accordion-header-selected {
+  background: #D4E7F0;
+}
+.accordion .accordion-header .panel-title {
+  color: #0E2D5F;
+  line-height:18px;
+  padding-left:22px;
+  font-size: 13px;
+}
+.tree-node {
+  box-sizing: border-box;
+  height: 25px;
+  padding-top:3px;
+}
+.tree-node-hover {
+  background:#00A6DF;
+}
+.tree-node-selected {
+  background: #00B0DF;
+}
+.tree-node .tree-title {
+    font-size: 13px;
+}
+div.menubox {
+	padding:5px;
+	background-color:#F0F9FD;
+	background-position: 0px -100px;
+}
+#tabpanel div.tabs-panels div.panel-body {
+	overflow: hidden;
+}
+
+/*top.html*/
+.header{height:88px;}
+.topleft{height:88px;background:url(../../contract/images/topleft.jpg) no-repeat;float:left; width:300px;}
+.topleft img{margin-top:12px;margin-left:10px;}
+.topright{height:88px;background:url(../../contract/images/topright.jpg) no-repeat right;float:right;}
+.nav{float:left;}
+.nav li{float:left;width:87px;height:88px; text-align:center;}
+.nav li a{display:block;width:87px;height:88px;-moz-transition: none; transition: background-color 0.3s linear; -moz-transition: background-color 0.3s linear; -webkit-transition: background-color 0.3s linear; -o-transition: background-color 0.3s linear; }
+.nav li a:hover{display:block;background:#000;color:#fff;background: none repeat scroll 0% 0% rgb(43, 127, 181);}
+.nav li a.selected{background:url(../../contract/images/navbg.png) no-repeat;}
+.nav li img{margin-top:10px;}
+.nav li a{display:block;}
+.nav a h2{font-size:14px;color:#d6e8f1;}
+.nav a:hover h2{color:#fff;}
+.topright ul{padding-top:15px; float:right; padding-right:12px;}
+.topright ul li{float:left; padding-left:9px; padding-right:9px; background:url(../../contract/images/line.gif) no-repeat right;}
+.topright ul li:last-child{background:none;}
+.topright ul li a{font-size:13px; color:#e9f2f7;}
+.topright ul li a:hover{color:#fff;}
+.topright a.userinfo{font-size:13px; color:#e9f2f7;font-weight: bold;}
+.topright a.userinfo:hover{color:#fff;}
+.topright ul li span{margin-top:2px;float:left;padding-right:3px;}
+.topright .helpimg {vertical-align:top;}
+.user{height:30px;background:url(../../contract/images/ub1.png) repeat-x;clear:both;margin-top:10px;float:right; margin-right:12px;border-radius:30px; behavior:url(js/pie.htc); white-space:nowrap;position:relative;}
+.user span{display:inline-block;padding-right:10px; background:url(../../contract/images/user.png) no-repeat 15px 10px; line-height:30px; font-size:14px;color:#b8ceda; padding-left:20px; padding-left:35px;}
+.user b{display:inline-block;width:20px;height:18px; background:url(../../contract/images/msg.png);text-align:center; font-weight:normal; color:#fff;font-size:14px;margin-right:13px; margin-top:7px; line-height:18px;}
+.user i{display:inline-block;margin-right:5px;font-style:normal;line-height:30px; font-size:14px;color:#b8ceda;}

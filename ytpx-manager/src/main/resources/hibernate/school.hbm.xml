@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <!-- 查询当前学到的期数 -->
+    <query name="school.checkTermBySysCode">
+	    <![CDATA[
+	    	select DISTINCT t from Term t
+	    	where t.sysCode =:sysCode
+	    ]]>
+    </query>
+    <query name="school.checkRegistBySysCode">
+	    <![CDATA[
+	    	select DISTINCT t from Registe t
+	    	where t.sysCode =:sysCode
+	    ]]>
+    </query>
+    
+    <query name="school.queryByDate">
+	    <![CDATA[
+	    	select DISTINCT t from Registe t
+	    	where t.sysCode =:sysCode and t.registeCode like :registeCode order by t.registeCode desc
+	    ]]>
+    </query>
+    
+    
+      <!-- 查询当前学校的单位 -->
+    <query name="school.checkCompanyBySysCode">
+	    <![CDATA[
+	    	select DISTINCT t from Company t
+	    	where t.sysCode =:sysCode
+	    ]]>
+    </query>
+    
+     <!-- 查询当前学校的单位 -->
+    <query name="school.likeCompanyName">
+	    <![CDATA[
+	    	select  t.id from Company t
+	    	where t.sysCode =:sysCode and t.companyName like :companyName
+	    ]]>
+    </query>
+    
+        <!-- 查询当前学的班级-->
+    <query name="school.checkClassesBySysCode">
+	    <![CDATA[
+	    	select DISTINCT t from Classes t
+	    	where t.sysCode =:sysCode
+	    ]]>
+    </query>
+    
+    <query name="school.checkTerm">
+	    <![CDATA[
+	    	select DISTINCT t from Term t
+	    	where t.sysCode =:sysCode and t.term=:term
+	    ]]>
+    </query>
+    
+    <query name="school.queryByYear">
+	    <![CDATA[
+	    	select DISTINCT t from Term t
+	    	where t.sysCode =:sysCode and t.years=:years order by t.createTime desc 
+	    ]]>
+    </query>
+    
+      <query name="school.checkTermCode">
+	    <![CDATA[
+	    	select DISTINCT t from Term t
+	    	where t.sysCode =:sysCode and t.termCode=:termCode
+	    ]]>
+    </query>
+    
+    <query name="school.checkFees">
+	    <![CDATA[
+	    	select DISTINCT t from FeesScheme t
+	    	where t.sysCode =:sysCode and t.schemeStatus=:schemeStatus
+	    ]]>
+    </query>
+      <query name="school.checkFee">
+	    <![CDATA[
+	    	select DISTINCT t from FeesScheme t
+	    	where  t.schemeStatus=:schemeStatus
+	    ]]>
+    </query>
+    
+    <query name="school.student.checkMobile">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.mobile=:mobile and  t.sysCode =:sysCode 
+	    ]]>
+    </query>
+    
+     <query name="school.queryByCompany">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.companyCode=:companyCode and  t.sysCode =:sysCode 
+	    ]]>
+    </query>
+    
+        <query name="school.student.checkByOpenIdAndMobile">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.mobile=:mobile and t.weixinOpenid=:weixinOpenid  and  t.sysCode =:sysCode and  t.studentStatus=0
+	    ]]>
+    </query>
+    
+     <query name="school.student.checkOpenIdByMobile">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.mobile=:mobile   and  t.sysCode =:sysCode and  t.studentStatus=0
+	    ]]>
+    </query>
+    
+     <query name="school.student.checkOpenId">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.weixinOpenid=:weixinOpenid  and  t.sysCode =:sysCode and  t.studentStatus=0
+	    ]]>
+    </query>
+    
+    <query name="school.student.checkRegiste">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.registeCode=:registeCode and  t.sysCode =:sysCode order by  t.createTime desc
+	    ]]>
+    </query>
+    
+    <query name="school.student.checkClass">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.classCode=:classCode and  t.sysCode =:sysCode order by  t.createTime desc
+	    ]]>
+    </query>
+    
+     <query name="school.student.notify">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.sysCode =:sysCode and t.termCode =:termCode and t.studentStatus in(:studentStatus)
+	    ]]>
+    </query>
+    
+       <query name="school.student.exportTemplet">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.classCode=:classCode and  t.sysCode =:sysCode and (t.studentStatus=1 or t.studentStatus=3 or t.studentStatus=6)
+	    ]]>
+    </query>
+    
+    
+    
+    <query name="school.student.checkRegisteStatus">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.registeCode=:registeCode and t.payStatus='1'
+	    ]]>
+    </query>
+    
+       <query name="school.student.checkTerm">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.termCode=:termCode and (t.studentStatus=0 or t.studentStatus=4)  and  t.sysCode =:sysCode
+	    ]]>
+    </query>
+    
+     <query name="school.queryStudentCountByterm">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.termCode=:termCode  and  t.sysCode =:sysCode and t.weixinOpenid IS NOT NULL
+	    ]]>
+    </query>
+    
+    <query name="school.student.checkIdcard">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.idcard=:idcard and  t.sysCode =:sysCode
+	    ]]>
+    </query>
+    
+     <query name="school.studentScore.checkIdcard">
+	    <![CDATA[
+	    	select DISTINCT t from StudentScore t
+	    	where  t.idcard=:idcard and  t.sysCode =:sysCode
+	    ]]>
+    </query>
+    
+    <query name="school.student.checkStudent">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.idcard=:idcard and  t.classCode =:classCode
+	    ]]>
+    </query>
+    <!--查询班级的通过人数  -->
+       <query name="school.student.checkClassPass">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where   t.classCode =:classCode  and  t.sysCode =:sysCode and  t.pass =:pass
+	    ]]>
+    </query>
+    
+    <query name="school.checkBySysCode">
+	    <![CDATA[
+	    	select DISTINCT t from School t
+	    	where t.sysCode =:sysCode
+	    ]]>
+    </query>
+    
+    
+    <query name="school.checkWeixinAccountsBySysCode">
+	    <![CDATA[
+	    	select DISTINCT t from WeixinAccounts t
+	    	where t.sysCode =:sysCode
+	    ]]>
+    </query>
+    
+    <!-- 查询未报满的班级 -->
+      <query name="school.checkClassStatusBySysCode">
+	    <![CDATA[
+	    	select DISTINCT t from Classes t
+	    	where t.sysCode =:sysCode and t.termCode =:termCode and t.classStatus=0 and t.classType='1' order by  t.classCode
+	    ]]>
+    </query>
+    
+    <!-- 查询特定学校的特定班级 -->
+      <query name="school.findClass">
+	    <![CDATA[
+	    	select DISTINCT t from Classes t
+	    	where t.classCode=:classCode and t.sysCode =:sysCode
+	    ]]>
+    </query>
+    
+    <!-- 查询每期的班级 -->
+      <query name="school.queryCountByTerm">
+	    <![CDATA[
+	    	select DISTINCT t from Classes t
+	    	where t.termCode=:termCode and t.sysCode =:sysCode order by t.createTime desc ,t.classCode desc
+	    ]]>
+    </query>
+    
+     <query name="school.student.queryStudent">
+	    <![CDATA[
+	    	select DISTINCT t from Student t
+	    	where  t.idcard=:idcard and  t.studentNo =:studentNo
+	    ]]>
+    </query>
+    
+     <!-- 查询突击班未报满的班级 -->
+      <query name="school.findSpringClass">
+	    <![CDATA[
+	    	select DISTINCT t from Classes t
+	    	where t.sysCode =:sysCode and t.termCode =:termCode and t.classStatus=0 and t.classType='2' order by  t.classCode
+	    ]]>
+    </query>
+   
+</hibernate-mapping>

@@ -1,0 +1,178 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font: 10pt "微软雅黑","宋体",Tahoma,Helvetica,Arial,Verdana,Sans-serif;
+}
+
+body,html {height: 100%;}
+
+/*浮动样式*/
+.float-left {float: left;}
+.float-right {float: right;}
+.clear {clear:both;}
+/*隐藏样式*/
+.hidden {display: none;}
+/*宽度样式*/
+.w50 {width:100px;}
+.w80 {width:100px;}
+.w100 {width:100px;}
+.w120 {width:120px;}
+.w150 {width:150px;}
+.w200 {width:200px;}
+.w250 {width:250px;}
+.w300 {width:300px;}
+/*颜色样式*/
+.red {color:red}
+.green {color:green}
+.blue {color:blue}
+.white {color:white}
+.black {color:black}
+.yellow {color:yellow}
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+li {list-style: none;}
+
+input,textarea,select {
+	font-family: "微软雅黑";
+	padding: 3px;
+	border: 1px solid #92CCF3;
+	box-sizing: border-box;
+}
+
+textarea {overflow: auto;}
+
+/*A链接通用样式*/
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #ff6600;
+	text-decoration: none;
+}
+
+/*信息提示条*/
+div.info-msg-tip {
+	box-sizing: border-box;
+	height:30px;
+	padding:5px;
+	padding-left: 32px;
+	background: #E8F6FF url("../image/info-tip-icon.png") no-repeat 8px 50%;
+	border: 1px solid #B8E2FB;
+	font-size: 10pt;
+	color: #555;
+}
+/*错误信息提示条*/
+div.error-msg-tip {
+	box-sizing: border-box;
+	height:30px;
+	padding:5px;
+	padding-left: 32px;
+	background: #FFD1D1 url("../image/error-tip-icon.png") no-repeat 8px 50%;
+	border: 1px solid #F8ACAC;
+	font-size: 10pt;
+	color: #555;
+}
+
+/*橙色框样式*/
+div.orange-infobox {
+	border: 1px solid #E9D1B2;
+	margin-bottom:5px;
+	background: #FCF9EB url('../image/orange-infobox-title-bg.png') repeat-x;
+	width:100%;
+	height:100px;
+}
+div.orange-infobox .infobox-title {
+	padding-left:30px;
+	border-bottom: 1px solid #E9D1B2 ;
+	background:url('../image/orange-infobox-title-right-arrow.png') no-repeat;
+	background-position:10px ;
+	height: 28px;
+	line-height: 28px;
+	vertical-align: middle;
+	font-size:14px;
+	font-weight: bold;
+	color: #E17009;
+}
+div.orange-infobox .infobox-content {
+	padding:5px;
+}
+/*蓝色框样式*/
+div.blue-infobox {
+	border: 1px solid #BEC2C5;
+	margin-bottom:5px;
+	background: #EFF3FF url('../image/blue-infobox-title-bg.png') repeat-x;
+	width:100%;
+	height:100px;
+}
+div.blue-infobox .infobox-title {
+	padding-left:30px;
+	border-bottom: 1px solid #BEC2C5;
+	background:url('../image/blue-infobox-title-right-arrow.png') no-repeat;
+	background-position:10px ;
+	height: 28px;
+	line-height: 28px;
+	vertical-align: middle;
+	font-size:14px;
+	font-weight: bold;
+	color: #46567D;
+}
+div.blue-infobox .infobox-content {
+	padding:5px;
+}
+
+
+/*页面容器*/
+div.container {
+	width: 100%;
+	height: 100%;
+}
+
+/*数据表单样式*/
+form.dialog-data-form {
+	width:100%;
+	height:100%;
+	border: 1px solid #92CCF3;
+	box-sizing: border-box;
+}
+
+form.dialog-data-form td.field {
+	width:70px;
+	text-align: right;
+	font-weight: bold;
+}
+form.dialog-data-form td.field-long {
+	width:100px;
+	text-align: right;
+	font-weight: bold;
+}
+form.dialog-data-form input.field,select.field {
+	width:150px;
+}
+form.dialog-data-form input.field-short,select.field-short {
+	width:120px;
+}
+form.dialog-data-form input.field-title {
+	width:100%;
+}
+form.dialog-data-form textarea.field-remark {
+	width:100%;
+	height:50px;
+}
+
+form.dialog-data-form textarea.field-detailDesc {
+	width:378px;
+	height:150px;
+}
+input.field-common {
+	border: 1px solid #92CCF3;
+	width:150px;
+}
+input.field-title-common {
+	border: 1px solid #92CCF3;
+	width:300px;
+}

@@ -1,0 +1,58 @@
+body {
+	background-color: white;
+}
+div.container {
+	box-sizing: border-box;
+	padding:10px;
+}
+div.left {
+	margin:0px 240px 0px 0px;
+	padding:0px;
+}
+div.right {
+	width:230px;
+	float:right;
+}
+img.bglogo {
+	position: fixed; 
+	right:0px;
+	bottom:0px;
+	z-index:-1;
+	width:590px;
+	height:300px;
+}
+table.tb1 {
+	margin:100px auto;
+	width:520px;
+	height:300px;
+}
+table.tb1 td {
+	width: 130px;
+	height: 130px;
+	vertical-align: middle;
+	text-align: center;
+}
+table.tb1 td a {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+table.tb1 td a img {
+	vertical-align: middle;
+	text-align: center;
+	border: none;
+}
+
+ul.quick-query {
+	margin:0px;
+	padding:0px;
+}
+ul.quick-query li {
+	list-style: none;
+	padding-left:30px;
+	background:url("../../image/system/admin/main/chart.png") 5px 2px no-repeat;
+	height: 28px;
+	font-size:14px;
+}

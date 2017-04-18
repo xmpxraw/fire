@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="off" monitorInterval="600">
+  <appenders>
+    <Console name="stdout" target="system_out">
+      <PatternLayout pattern="%d{absolute} %5p [%c{2}:%line] - %m%n"/>
+      <!-- %d %-5p [%t] %c{2} (%f:%l) - %m%n -->
+    </Console>
+    <!-- 
+    <File name="system" fileName="/data/log4j/yuantai.log" append="true">
+      <PatternLayout pattern="%d %5p [%c:%l] - %m%n"/>
+    </File>
+     -->
+    <!-- 程序员调试日志 -->  
+    <!-- 
+    <RollingRandomAccessFile name="logfile" fileName="/data/log4j/yuantai-dev.log" filePattern="/datayuantaiyuantai2-dev.%d{yyyy-MM-dd}.log">
+        <PatternLayout pattern="%date{MM-dd HH:mm:ss} %level [%thread][%file:%line] - %msg%n" />
+        <Policies>
+            <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            <SizeBasedTriggeringPolicy size="5 MB" />
+        </Policies>
+        <DefaultRolloverStrategy max="5" />
+    </RollingRandomAccessFile>  
+     -->
+  </appenders>
+  <loggers>
+    <root level="info">
+      <appenderref ref="stdout"/>
+    </root>
+    <logger name="org.springframework" level="error"/>
+    <logger name="org.hibernate" level="error"/>
+    <logger name="org.hibernate.internal" level="info"/>
+    <logger name="org.hibernate.engine.transaction.internal" level="info"/>
+    <logger name="org.hibernate.type.descriptor.sql" level="info"/>
+    <logger name="org.yuantai" level="debug">
+    	<appender-ref ref="logfile"/>
+    </logger>
+  </loggers>
+</configuration>
